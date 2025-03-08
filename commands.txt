@@ -1,0 +1,7 @@
+# Build and Deploy::
+docker build --rm --build-arg IMAGE_BUILD_TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')" -t curis-topics-viewer:1.0.0-snapshot --file Dockerfile .
+
+helm upgrade curis-topics-viewer-site-a --install --namespace site-a --set serviceName=curis-topics-viewer,imagePullPolicy=Never,hostPathCerts=/Users/yemie/dev/curis-secrets,kafkaCluster=curis-data-broker,basePort=31004,kafkaClusterPort=31002,imageTag=1.0.0-snapshot,numOfPods=1 helm
+
+URL ===
+https://curis-topics-viewer.site-a:31004

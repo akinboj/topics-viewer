@@ -1,0 +1,5 @@
+---
+name: kafdrop-ui
+version: 1.0.0-SNAPSHOT
+description: Kafdrop UI - Interface for viewing and managing Kafka clusters
+icon: img/icons/camel.svg
