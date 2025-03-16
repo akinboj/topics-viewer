@@ -41,7 +41,7 @@ ssl.key.password=${KEY_PASSWORD}
 ssl.keystore.type=PKCS12
 ssl.truststore.type=PKCS12
 ssl.client.auth=required
-ssl.endpoint.identification.algorithm=
+ssl.endpoint.identification.algorithm=HTTPS
 EOF
 
 # Ensure the kafka.properties file exists
